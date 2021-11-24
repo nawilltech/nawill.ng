@@ -1,0 +1,18 @@
+.all-good {
+    color: green;
+}
+
+.in-progress {
+    color: orange;
+}
+
+.attention {
+    color: yellow;
+}
+.pending-danger {
+    color:red;
+}
+
+.nothing-serious {
+    color: violet;
+}
