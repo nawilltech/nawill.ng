@@ -10,7 +10,7 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: grey;
+  color: grey;''
 }
 
 a {
@@ -40,6 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 9999;
   overflow: hidden;
   background: #fff;
+  color: #ffb200
 }
 
 #preloader:before {
