@@ -1,22 +1,41 @@
 
+:root {
+  /* Nawill brand palette */
+  --nawill-ink: #20264A;         /* primary navy — buttons, icons, structural accents */
+  --nawill-blue: #4757B8;        /* accent blue — hover/highlight states */
+  --nawill-blue-deep: #29335C;   /* default inline link color */
+  --nawill-blue-muted: #8E9BD8;  /* accent text/icons on dark navy backgrounds */
+  --nawill-blue-pale: #B7BEDB;   /* secondary text on dark navy backgrounds */
+  --nawill-paper: #E4DCC8;       /* warm section background */
+  --nawill-cream: #F4EEDD;       /* pill / wash backgrounds */
+  --nawill-cream-soft: #FBF9F2;  /* near-white warm panel background */
+  --nawill-border: #D8CFB4;      /* borders on warm backgrounds */
+  --nawill-olive: #7A7256;       /* uppercase kicker/label text */
+  --nawill-text: #2B2E44;        /* body copy */
+  --nawill-text-muted: #5B5638;  /* secondary/description copy */
+  --nawill-heading: #20264A;     /* headings */
+}
+
 body {
-  font-family: "Open Sans", sans-serif;
-  color: #555;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: var(--nawill-text);
+  background: var(--nawill-cream-soft);
 }
 
 a {
-  color: #2a3dbb;
+  color: var(--nawill-blue-deep);
   text-decoration: none;
 }
 
 a:hover {
-  color: #13389e;
+  color: var(--nawill-blue);
   text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto", sans-serif;
-  color: #222;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  color: var(--nawill-heading);
 }
 
 /*--------------------------------------------------------------
@@ -26,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: 9999;
-  background: #fff;
+  background: var(--nawill-cream-soft);
 }
 
 #preloader:before {
@@ -34,8 +53,8 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #29449c;
-  border-top-color: #e2eefd;
+  border: 6px solid var(--nawill-blue);
+  border-top-color: var(--nawill-cream);
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -66,13 +85,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  background: #13389e;
+  background: var(--nawill-ink);
   color: #fff;
   transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-  background: #29449c;
+  background: var(--nawill-blue);
 }
 
 @media screen and (max-width: 768px) {
@@ -112,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: #13389e;
+  background: var(--nawill-ink);
   height: 40px;
   font-size: 14px;
   transition: all 0.5s;
@@ -150,7 +169,7 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #fff;
+  background: var(--nawill-cream-soft);
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
@@ -184,12 +203,12 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: block;
   position: relative;
-  color: #333;
+  color: var(--nawill-heading);
   transition: 0.3s;
   font-size: 14px;
   font-weight: 600;
   padding: 0 3px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .nav-menu > ul > li > a:before {
@@ -199,7 +218,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
   bottom: -5px;
   left: 0;
-  background-color: #13389e;
+  background-color: var(--nawill-ink);
   visibility: hidden;
   transition: all 0.3s ease-in-out 0s;
 }
@@ -213,30 +232,30 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu a:hover,
 .nav-menu .active > a,
-.nav-menu li:hover > a { color: #13389e; }
+.nav-menu li:hover > a { color: var(--nawill-ink); }
 
 .nav-cta {
-  background: #13389e !important;
+  background: var(--nawill-ink) !important;
   color: #fff !important;
   padding: 8px 18px !important;
   border-radius: 4px;
   font-size: 13px !important;
 }
 
-.nav-cta:hover { background: #0e2d85 !important; }
+.nav-cta:hover { background: var(--nawill-blue) !important; }
 .nav-cta::before { display: none !important; }
 
 .nav-start-project {
   background: transparent !important;
-  color: #13389e !important;
+  color: var(--nawill-ink) !important;
   padding: 7px 16px !important;
   border-radius: 4px;
   font-size: 13px !important;
-  border: 1.5px solid #13389e !important;
+  border: 1.5px solid var(--nawill-ink) !important;
 }
 
 .nav-start-project:hover {
-  background: #13389e !important;
+  background: var(--nawill-ink) !important;
   color: #fff !important;
 }
 
@@ -257,7 +276,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-.mobile-nav-toggle i { color: #222; }
+.mobile-nav-toggle i { color: var(--nawill-heading); }
 
 .mobile-nav {
   position: fixed;
@@ -267,7 +286,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 15px;
   z-index: 9999;
   overflow-y: auto;
-  background: #fff;
+  background: var(--nawill-cream-soft);
   transition: ease-in-out 0.2s;
   opacity: 0;
   visibility: hidden;
@@ -280,7 +299,7 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav a {
   display: block;
   position: relative;
-  color: #222;
+  color: var(--nawill-heading);
   padding: 10px 20px;
   font-weight: 500;
   outline: none;
@@ -288,7 +307,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-nav a:hover,
 .mobile-nav .active > a,
-.mobile-nav li:hover > a { color: #13389e; text-decoration: none; }
+.mobile-nav li:hover > a { color: var(--nawill-ink); text-decoration: none; }
 
 .mobile-nav-overly {
   width: 100%;
@@ -322,7 +341,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero:before {
   content: "";
-  background: rgba(10, 25, 80, 0.82);
+  background: rgba(32, 38, 74, 0.82);
   position: absolute;
   bottom: 0; top: 0; left: 0; right: 0;
 }
@@ -341,9 +360,10 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #c8d8ff;
+  color: var(--nawill-blue-pale);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: 'IBM Plex Mono', monospace;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   padding: 6px 16px;
@@ -354,13 +374,13 @@ h1, h2, h3, h4, h5, h6 {
 #hero h1 {
   margin: 0 0 20px 0;
   font-size: 52px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.15;
   color: #fff;
-  font-family: "Poppins", sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
-#hero h1 span { color: #7ca3ff; }
+#hero h1 span { color: var(--nawill-blue-muted); }
 
 .hero-sub {
   color: rgba(255, 255, 255, 0.8);
@@ -373,7 +393,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-ctas { gap: 16px; flex-wrap: wrap; }
 
 #hero .btn-get-started {
-  font-family: "Roboto", sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 600;
   font-size: 15px;
   display: inline-block;
@@ -381,14 +401,14 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
   transition: 0.3s;
   color: #fff;
-  background: #13389e;
-  border: 2px solid #13389e;
+  background: var(--nawill-ink);
+  border: 2px solid var(--nawill-ink);
 }
 
-#hero .btn-get-started:hover { background: #0e2d85; border-color: #0e2d85; }
+#hero .btn-get-started:hover { background: var(--nawill-blue); border-color: var(--nawill-blue); }
 
 .btn-learn-more {
-  font-family: "Roboto", sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 600;
   font-size: 15px;
   display: inline-flex;
@@ -428,7 +448,7 @@ section {
   overflow: hidden;
 }
 
-.section-bg { background-color: #f6f9fe; }
+.section-bg { background-color: var(--nawill-paper); }
 
 .section-title {
   text-align: center;
@@ -438,11 +458,12 @@ section {
 .section-title h2 {
   font-size: 12px;
   letter-spacing: 2px;
-  font-weight: 700;
+  font-weight: 500;
   padding: 6px 18px;
   margin: 0;
-  background: #e7f1fd;
-  color: #13389e;
+  background: var(--nawill-cream);
+  color: var(--nawill-olive);
+  font-family: 'IBM Plex Mono', monospace;
   display: inline-block;
   text-transform: uppercase;
   border-radius: 50px;
@@ -452,10 +473,10 @@ section {
   margin: 12px 0 0 0;
   font-size: 30px;
   font-weight: 700;
-  color: #222;
+  color: var(--nawill-heading);
 }
 
-.section-title h3 span { color: #13389e; }
+.section-title h3 span { color: var(--nawill-blue); }
 
 /*--------------------------------------------------------------
 # Who It's For
@@ -465,14 +486,14 @@ section {
 .who-intro {
   font-size: 16px;
   line-height: 1.8;
-  color: #555;
+  color: var(--nawill-text);
   margin-bottom: 12px;
 }
 
 .highlight-text {
   font-size: 18px;
   font-weight: 700;
-  color: #13389e;
+  color: var(--nawill-blue);
   margin-top: 4px;
   margin-bottom: 0;
 }
@@ -483,8 +504,8 @@ section {
 .featured-services { padding: 60px 0; }
 
 .service-card {
-  background: #fff;
-  box-shadow: 0 2px 28px rgba(68, 88, 144, 0.1);
+  background: var(--nawill-cream-soft);
+  box-shadow: 0 2px 28px rgba(32, 38, 74, 0.12);
   border-radius: 10px;
   padding: 30px 26px;
   position: relative;
@@ -499,7 +520,7 @@ section {
 .service-card::before {
   content: '';
   position: absolute;
-  background: #e7f1fd;
+  background: var(--nawill-cream);
   right: 0; left: 0; bottom: 0;
   top: 100%;
   transition: all 0.35s;
@@ -507,16 +528,16 @@ section {
 }
 
 .service-card:hover::before {
-  background: #13389e;
+  background: var(--nawill-ink);
   top: 0;
 }
 
 .service-card.featured {
-  border: 2px solid #13389e;
+  border: 2px solid var(--nawill-ink);
 }
 
 .service-card.featured::before {
-  background: #13389e;
+  background: var(--nawill-ink);
   top: 0;
 }
 
@@ -528,16 +549,16 @@ section {
 .service-card.featured .icon i,
 .service-card.featured .service-number { color: #fff; }
 
-.service-card.featured .service-list li i { color: #7ca3ff; }
+.service-card.featured .service-list li i { color: var(--nawill-blue-muted); }
 .service-card.featured .service-number { color: rgba(255,255,255,0.2); }
-.service-card.featured .service-subtitle { color: #c8d8ff; }
+.service-card.featured .service-subtitle { color: var(--nawill-blue-pale); }
 
 .service-number {
   font-size: 48px;
-  font-weight: 800;
-  color: #e7f1fd;
+  font-weight: 500;
+  color: var(--nawill-cream);
   line-height: 1;
-  font-family: "Poppins", sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   margin-bottom: -8px;
 }
 
@@ -545,23 +566,24 @@ section {
 
 .service-card .icon i {
   font-size: 40px;
-  color: #13389e;
+  color: var(--nawill-ink);
   transition: color 0.3s;
   line-height: 1;
 }
 
 .service-card .title {
   font-size: 20px;
-  font-weight: 800;
-  color: #222;
+  font-weight: 700;
+  color: var(--nawill-heading);
   margin-bottom: 2px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .service-subtitle {
   font-size: 12px;
-  font-weight: 600;
-  color: #13389e;
+  font-weight: 500;
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--nawill-blue);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 12px;
@@ -570,7 +592,7 @@ section {
 .service-card .description {
   font-size: 14px;
   line-height: 1.7;
-  color: #666;
+  color: var(--nawill-text-muted);
   margin-bottom: 16px;
 }
 
@@ -583,7 +605,7 @@ section {
 
 .service-list li {
   font-size: 13px;
-  color: #555;
+  color: var(--nawill-text);
   padding: 3px 0;
   display: flex;
   align-items: center;
@@ -591,7 +613,7 @@ section {
 }
 
 .service-list li i {
-  color: #13389e;
+  color: var(--nawill-ink);
   font-size: 16px;
   flex-shrink: 0;
 }
@@ -602,7 +624,7 @@ section {
   gap: 6px;
   font-size: 14px;
   font-weight: 700;
-  color: #13389e;
+  color: var(--nawill-ink);
   transition: 0.3s;
 }
 
@@ -612,8 +634,8 @@ section {
 .service-card:hover .description,
 .service-card:hover .service-list li { color: #fff; }
 
-.service-card:hover .service-subtitle { color: #c8d8ff; }
-.service-card:hover .service-list li i { color: #7ca3ff; }
+.service-card:hover .service-subtitle { color: var(--nawill-blue-pale); }
+.service-card:hover .service-list li i { color: var(--nawill-blue-muted); }
 .service-card:hover .icon i,
 .service-card:hover .service-cta { color: #fff; }
 .service-card:hover .service-number { color: rgba(255,255,255,0.2); }
@@ -644,7 +666,7 @@ section {
 .step-num {
   width: 30px;
   height: 30px;
-  background: #13389e;
+  background: var(--nawill-ink);
   color: #fff;
   border-radius: 50%;
   font-size: 13px;
@@ -654,12 +676,12 @@ section {
   justify-content: center;
   flex-shrink: 0;
   margin-top: 2px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .step-body i {
   font-size: 22px;
-  color: #13389e;
+  color: var(--nawill-ink);
   display: block;
   margin-bottom: 6px;
 }
@@ -667,14 +689,14 @@ section {
 .step-body h5 {
   font-size: 15px;
   font-weight: 700;
-  color: #222;
+  color: var(--nawill-heading);
   margin-bottom: 4px;
 }
 
 .step-body p {
   font-size: 13px;
   line-height: 1.6;
-  color: #666;
+  color: var(--nawill-text-muted);
   margin: 0;
 }
 
@@ -682,7 +704,7 @@ section {
   display: flex;
   align-items: center;
   padding-top: 4px;
-  color: #c8d8ff;
+  color: var(--nawill-blue-pale);
   font-size: 24px;
   flex-shrink: 0;
 }
@@ -708,7 +730,7 @@ section {
 .why-icon {
   width: 46px;
   height: 46px;
-  background: #e7f1fd;
+  background: var(--nawill-cream);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -716,19 +738,19 @@ section {
   flex-shrink: 0;
 }
 
-.why-icon i { font-size: 22px; color: #13389e; }
+.why-icon i { font-size: 22px; color: var(--nawill-ink); }
 
 .why-item h5 {
   font-size: 15px;
   font-weight: 700;
-  color: #222;
+  color: var(--nawill-heading);
   margin-bottom: 4px;
 }
 
 .why-item p {
   font-size: 13px;
   line-height: 1.7;
-  color: #666;
+  color: var(--nawill-text-muted);
   margin: 0;
 }
 
@@ -740,7 +762,7 @@ section {
 }
 
 .why-stat {
-  background: #13389e;
+  background: var(--nawill-ink);
   border-radius: 10px;
   padding: 22px 36px;
   text-align: center;
@@ -750,9 +772,9 @@ section {
 .stat-num {
   display: block;
   font-size: 38px;
-  font-weight: 800;
+  font-weight: 600;
   color: #fff;
-  font-family: "Poppins", sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   line-height: 1;
   margin-bottom: 4px;
 }
@@ -778,7 +800,7 @@ section {
   content: "";
   position: absolute;
   left: 0; right: 0; top: 0; bottom: 0;
-  background: rgba(5, 15, 60, 0.82);
+  background: rgba(32, 38, 74, 0.85);
 }
 
 .testimonials-title h3,
@@ -786,7 +808,7 @@ section {
 
 .testimonials-title h2 {
   background: rgba(255,255,255,0.15);
-  color: #c8d8ff;
+  color: var(--nawill-blue-pale);
 }
 
 .testimonials .testimonial-item { text-align: center; color: #fff; }
@@ -800,7 +822,7 @@ section {
 
 .testimonials .testimonial-item h4 {
   font-size: 13px;
-  color: #c8d8ff;
+  color: var(--nawill-blue-pale);
   margin: 0 0 12px 0;
 }
 
@@ -816,7 +838,7 @@ section {
 .testimonials .testimonial-item p {
   font-style: italic;
   margin: 0 auto 15px auto;
-  color: #dde8ff;
+  color: var(--nawill-blue-pale);
   font-size: 14px;
   line-height: 1.75;
 }
@@ -832,7 +854,7 @@ section {
   background-color: rgba(255, 255, 255, 0.4) !important;
 }
 
-.testimonials .owl-dot.active { background-color: #7ca3ff !important; }
+.testimonials .owl-dot.active { background-color: var(--nawill-blue-muted) !important; }
 
 @media (min-width: 1024px) {
   .testimonials { background-attachment: fixed; }
@@ -849,10 +871,11 @@ section {
   border: none;
   border-radius: 10px;
   overflow: hidden;
+  background: var(--nawill-cream-soft);
 }
 
 #projectModal .modal-header {
-  background: #13389e;
+  background: var(--nawill-ink);
   border: none;
   padding: 18px 24px;
 }
@@ -861,7 +884,7 @@ section {
   color: #fff;
   font-size: 18px;
   font-weight: 700;
-  font-family: "Poppins", sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 #projectModal .close {
@@ -877,12 +900,12 @@ section {
 
 .modal-intro {
   font-size: 14px;
-  color: #666;
+  color: var(--nawill-text-muted);
   margin-bottom: 20px;
 }
 
 .modal-intro a {
-  color: #13389e;
+  color: var(--nawill-ink);
   font-weight: 600;
   text-decoration: underline;
 }
@@ -896,7 +919,7 @@ section {
   display: block;
   font-size: 13px;
   font-weight: 600;
-  color: #333;
+  color: var(--nawill-heading);
   margin-bottom: 5px;
 }
 
@@ -910,13 +933,13 @@ section {
   width: 100%;
   padding: 9px 12px;
   font-size: 14px;
-  color: #333;
-  background: #fff;
-  border: 1px solid #d1dff8;
+  color: var(--nawill-heading);
+  background: var(--nawill-cream-soft);
+  border: 1px solid var(--nawill-border);
   border-radius: 6px;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   appearance: none;
   -webkit-appearance: none;
 }
@@ -924,8 +947,8 @@ section {
 .proj-form input:focus,
 .proj-form select:focus,
 .proj-form textarea:focus {
-  border-color: #13389e;
-  box-shadow: 0 0 0 3px rgba(19, 56, 158, 0.1);
+  border-color: var(--nawill-ink);
+  box-shadow: 0 0 0 3px rgba(71, 87, 184, 0.15);
 }
 
 .proj-form textarea { resize: vertical; min-height: 100px; }
@@ -939,13 +962,13 @@ section {
   cursor: pointer;
   font-size: 13px;
   font-weight: 500;
-  color: #444;
+  color: var(--nawill-text-muted);
 }
 
 .radio-label input[type="radio"] {
   width: 15px;
   height: 15px;
-  accent-color: #13389e;
+  accent-color: var(--nawill-ink);
   cursor: pointer;
 }
 
@@ -953,7 +976,7 @@ section {
 
 .currency-toggle {
   display: flex;
-  border: 1px solid #d1dff8;
+  border: 1px solid var(--nawill-border);
   border-radius: 6px;
   overflow: hidden;
   flex-shrink: 0;
@@ -964,13 +987,13 @@ section {
   font-size: 12px;
   font-weight: 700;
   border: none;
-  background: #fff;
-  color: #666;
+  background: var(--nawill-cream-soft);
+  color: var(--nawill-text-muted);
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
 
-.currency-btn.active { background: #13389e; color: #fff; }
+.currency-btn.active { background: var(--nawill-ink); color: #fff; }
 
 .budget-select { flex: 1; }
 
@@ -996,7 +1019,7 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #13389e;
+  background: var(--nawill-ink);
   color: #fff;
   font-size: 14px;
   font-weight: 700;
@@ -1005,10 +1028,10 @@ section {
   border: none;
   cursor: pointer;
   transition: background 0.2s;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.btn-submit-nawill:hover { background: #0e2d85; }
+.btn-submit-nawill:hover { background: var(--nawill-blue); }
 .btn-submit-nawill:disabled { opacity: 0.65; cursor: not-allowed; }
 
 .btn-wa-nawill {
@@ -1016,14 +1039,14 @@ section {
   align-items: center;
   gap: 7px;
   background: transparent;
-  color: #555;
+  color: var(--nawill-text);
   font-size: 13px;
   font-weight: 600;
   padding: 11px 18px;
   border-radius: 6px;
-  border: 1px solid #d1dff8;
+  border: 1px solid var(--nawill-border);
   transition: border-color 0.2s, color 0.2s;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .btn-wa-nawill:hover { border-color: #25d366; color: #25d366; }
@@ -1043,15 +1066,15 @@ section {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #222;
+  color: var(--nawill-heading);
 }
 
-.proj-success-inner p { color: #666; margin-bottom: 20px; font-size: 14px; }
+.proj-success-inner p { color: var(--nawill-text-muted); margin-bottom: 20px; font-size: 14px; }
 
 .btn-outline-nawill {
   display: inline-block;
-  border: 1px solid #13389e;
-  color: #13389e;
+  border: 1px solid var(--nawill-ink);
+  color: var(--nawill-ink);
   font-size: 13px;
   font-weight: 600;
   padding: 9px 22px;
@@ -1059,46 +1082,47 @@ section {
   background: transparent;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.btn-outline-nawill:hover { background: #13389e; color: #fff; }
+.btn-outline-nawill:hover { background: var(--nawill-ink); color: #fff; }
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
   font-size: 14px;
-  background: #f1f6fe;
+  background: var(--nawill-cream);
 }
 
 #footer .footer-top {
   padding: 48px 0 24px 0;
-  background: #fff;
+  background: var(--nawill-cream-soft);
 }
 
 #footer .footer-contact { margin-bottom: 30px; }
 
 #footer .footer-contact h3 {
-  font-size: 24px;
+  font-size: 26px;
   margin: 0 0 10px 0;
-  font-weight: 800;
-  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  font-family: 'Special Elite', monospace;
 }
 
-#footer .footer-contact h3 span { color: #13389e; }
+#footer .footer-contact h3 span { color: var(--nawill-blue); }
 
 #footer .footer-contact p {
   font-size: 13px;
   line-height: 1.8;
-  color: #666;
-  font-family: "Roboto", sans-serif;
+  color: var(--nawill-text-muted);
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 #footer .footer-top h4 {
   font-size: 14px;
   font-weight: 700;
-  color: #222;
+  color: var(--nawill-heading);
   padding-bottom: 10px;
   margin-bottom: 12px;
 }
@@ -1113,7 +1137,7 @@ section {
 
 #footer .footer-links ul i {
   padding-right: 2px;
-  color: #13389e;
+  color: var(--nawill-ink);
   font-size: 16px;
   line-height: 1;
 }
@@ -1127,7 +1151,7 @@ section {
 #footer .footer-links ul li:first-child { padding-top: 0; }
 
 #footer .footer-links ul a {
-  color: #666;
+  color: var(--nawill-text-muted);
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
@@ -1135,12 +1159,12 @@ section {
   cursor: pointer;
 }
 
-#footer .footer-links ul a:hover { color: #13389e; }
+#footer .footer-links ul a:hover { color: var(--nawill-ink); }
 
 #footer .footer-top .social-links a {
   font-size: 17px;
   display: inline-block;
-  background: #13389e;
+  background: var(--nawill-ink);
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1152,12 +1176,12 @@ section {
   transition: 0.3s;
 }
 
-#footer .footer-top .social-links a:hover { background: #0e2d85; }
+#footer .footer-top .social-links a:hover { background: var(--nawill-blue); }
 
 #footer .copyright {
   text-align: center;
   float: left;
-  color: #555;
+  color: var(--nawill-text);
   font-size: 13px;
 }
 
@@ -1165,7 +1189,7 @@ section {
   float: right;
   text-align: center;
   font-size: 12px;
-  color: #777;
+  color: var(--nawill-olive);
 }
 
 @media (max-width: 768px) {
